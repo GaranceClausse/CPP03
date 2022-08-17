@@ -20,7 +20,36 @@ int	main()
 	std::cout << "How would you like to name your target? : " << std::endl;
 	std::getline(std::cin, targetname);
 	ClapTrap target(targetname);
+	std::cout << "Let's start the fight!" << std::endl << std::endl;
+
 
 	claptrap.attack(targetname);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.attack(targetname);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.takeDamage(2);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.attack(targetname);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.takeDamage(4);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.beRepaired(3);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.attack(targetname);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.attack(targetname);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.attack(targetname);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.attack(targetname);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.attack(targetname);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.attack(targetname);
+	std::cout << claptrap << std::endl << std::endl;
+	claptrap.attack(targetname);
+	std::cout << claptrap << std::endl << std::endl;
+
+
 	return 0;
 }

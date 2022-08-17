@@ -14,6 +14,21 @@
 #include <string>
 #include <iostream>
 
+
+#define COLOR "\033[;"
+#define RED "31m"
+#define GREEN "32m"
+#define YELLOW "33m"
+#define BLUE "34m"
+#define MAGENTA "35m"
+#define CYAN "36m"
+#define B_RED "41m"
+#define B_GREEN "42m"
+#define B_YELLOW "43m"
+#define B_BLUE	"44m"
+#define RESET "\033[0m"
+
+
 class ClapTrap
 {
 private:
