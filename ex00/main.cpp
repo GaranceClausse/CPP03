@@ -10,3 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
+
+int	main()
+{
+	ClapTrap	claptrap("Garance");
+	std::string	targetname;
+
+	std::cout << "How would you like to name your target? : " << std::endl;
+	std::getline(std::cin, targetname);
+	ClapTrap target(targetname);
+
+	claptrap.attack(targetname);
+	return 0;
+}
