@@ -74,9 +74,9 @@ void ClapTrap::attack(const std::string& target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	_hitPoints -= amount;
-	std::cout << COLOR RED "ClapTrap " << _name << " takes " << amount << " of damage! " COLOR RESET <<std ::endl;
-	if (_hitPoints == 0)
-		std::cout <<  COLOR CYAN << _name << "is dead" COLOR RESET  << std::endl;
+		std::cout << COLOR RED << _name << " takes " << amount << " of damage! " COLOR RESET <<std ::endl;
+	if (_hitPoints <= 0)
+		std::cout <<  COLOR BLUE << _name << " is dead" COLOR RESET  << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -85,7 +85,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	{
 		_hitPoints += amount;
 		_energyPoints -= 1;
-		std::cout << COLOR GREEN "ClapTrap" << _name << " is repaired of " << amount << " points and now has " << _hitPoints << " hit points!" COLOR RESET <<std ::endl;
+		std::cout << COLOR GREEN << _name << " is repaired of " << amount << " points and now has " << _hitPoints << " hit points!" COLOR RESET <<std ::endl;
 
 	}
 	else

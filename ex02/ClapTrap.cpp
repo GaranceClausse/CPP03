@@ -14,23 +14,29 @@
 
 ClapTrap::ClapTrap() : _name(""), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	std::cout << "ClapTrap Constructor called" << std::endl;
+	std::cout << COLOR B_YELLOW  "ClapTrap Constructor called" COLOR RESET  << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	std::cout << "ClapTrap Param constructor" << std::endl;
+	std::cout <<COLOR  B_YELLOW  "ClapTrap Param constructor" COLOR RESET  << std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name, unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage) :
+	_name(name), _hitPoints(hitPoints), _energyPoints(energyPoints), _attackDamage(attackDamage)
+{
+	std::cout <<COLOR  B_YELLOW  "ClapTrap Param2 constructor"  COLOR RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const& copy)
 {
-	std::cout << "ClapTrap Copy constructor" << std::endl;
+	std::cout << COLOR  B_YELLOW "ClapTrap Copy constructor" COLOR RESET  << std::endl;
 	operator=(copy);
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap " << _name << " Destructor called" << std::endl;
+	std::cout <<COLOR  B_YELLOW  "ClapTrap " << _name << " Destructor called" COLOR RESET  << std::endl;
 }
 
 ClapTrap&	ClapTrap::operator=(ClapTrap const& copy)
@@ -68,9 +74,9 @@ void ClapTrap::attack(const std::string& target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	_hitPoints -= amount;
-	std::cout << COLOR RED "ClapTrap " << _name << " takes " << amount << " of damage! " COLOR RESET <<std ::endl;
-	if (_hitPoints == 0)
-		std::cout <<  COLOR CYAN << _name << "is dead" COLOR RESET  << std::endl;
+		std::cout << COLOR RED << _name << " takes " << amount << " of damage! " COLOR RESET <<std ::endl;
+	if (_hitPoints <= 0)
+		std::cout <<  COLOR BLUE << _name << " is dead" COLOR RESET  << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -79,7 +85,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	{
 		_hitPoints += amount;
 		_energyPoints -= 1;
-		std::cout << COLOR GREEN "ClapTrap" << _name << " is repaired of " << amount << " points and now has " << _hitPoints << " hit points!" COLOR RESET <<std ::endl;
+		std::cout << COLOR GREEN << _name << " is repaired of " << amount << " points and now has " << _hitPoints << " hit points!" COLOR RESET <<std ::endl;
 
 	}
 	else

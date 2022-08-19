@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
 int	main()
 {
 	ScavTrap	scavtrap("Clement");
+	FragTrap	fragtrap("Lola");
 	std::string	targetname;
 
 	std::cout << "How would you like to name your target? : " << std::endl;
@@ -25,30 +27,29 @@ int	main()
 
 	scavtrap.attack(targetname);
 	std::cout << scavtrap << std::endl << std::endl;
-	scavtrap.attack(targetname);
-	std::cout << scavtrap << std::endl << std::endl;
 	scavtrap.takeDamage(20);
-	std::cout << scavtrap << std::endl << std::endl;
-	scavtrap.takeDamage(40);
 	std::cout << scavtrap << std::endl << std::endl;
 	scavtrap.beRepaired(3);
 	std::cout << scavtrap << std::endl << std::endl;
 	scavtrap.guardGate();
 	std::cout << scavtrap << std::endl << std::endl;
-	scavtrap.attack(targetname);
-	std::cout << scavtrap << std::endl << std::endl;
-	scavtrap.takeDamage(20);
-	std::cout << scavtrap << std::endl << std::endl;
-	scavtrap.attack(targetname);	
-	std::cout << scavtrap << std::endl << std::endl;
-	scavtrap.takeDamage(20);
-	std::cout << scavtrap << std::endl << std::endl;
-	scavtrap.attack(targetname);
-	std::cout << scavtrap << std::endl << std::endl;	
-	scavtrap.takeDamage(10);
-	std::cout << scavtrap << std::endl << std::endl;
-	scavtrap.attack(targetname);
-	std::cout << scavtrap << std::endl << std::endl;
+	
+	fragtrap.attack(targetname);
+	std::cout << fragtrap << std::endl << std::endl;
+	fragtrap.takeDamage(20);
+	std::cout << fragtrap << std::endl << std::endl;
+	fragtrap.attack(targetname);	
+	std::cout << fragtrap << std::endl << std::endl;
+	fragtrap.takeDamage(20);
+	std::cout << fragtrap << std::endl << std::endl;	
+	fragtrap.highFivesGuys();
+	std::cout << fragtrap << std::endl << std::endl;
+	fragtrap.attack(targetname);
+	std::cout << fragtrap << std::endl << std::endl;	
+	fragtrap.takeDamage(60);
+	std::cout << fragtrap << std::endl << std::endl;
+	fragtrap.attack(targetname);
+	std::cout << fragtrap << std::endl << std::endl;
 
 
 	return 0;

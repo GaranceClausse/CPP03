@@ -14,23 +14,23 @@
 
 ScavTrap::ScavTrap() : ClapTrap("", 100, 50, 20)
 {
-	std::cout << "ScavTrap Constructor called" << std::endl;
+	std::cout <<COLOR  B_RED "ScavTrap Constructor called"  COLOR RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name, 100, 50, 20)
 {
-	std::cout << "ScavTrap Param constructor" << std::endl;
+	std::cout <<COLOR B_RED "ScavTrap Param constructor" COLOR RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const& copy) : ClapTrap("", 100, 50, 20)
 {
-	std::cout << "ScavTrap Copy constructor" << std::endl;
+	std::cout << COLOR B_RED "ScavTrap Copy constructor"  COLOR RESET << std::endl;
 	operator=(copy);
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap " << _name << " Destructor called" << std::endl;
+	std::cout <<COLOR  B_RED "ScavTrap " << _name << " Destructor called"  COLOR RESET << std::endl;
 }
 
 void		ScavTrap::display(std::ostream& stream) const

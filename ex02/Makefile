@@ -1,5 +1,5 @@
-NAME = ClapTrap
-OBJS = main.cpp ClapTrap.cpp
+NAME = FragTrap
+OBJS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror
