@@ -22,6 +22,12 @@ ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints
 	std::cout << "ClapTrap Param constructor" << std::endl;
 }
 
+ClapTrap::ClapTrap(std::string name, unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage) :
+	_name(name), _hitPoints(hitPoints), _energyPoints(energyPoints), _attackDamage(attackDamage)
+{
+	std::cout << "ClapTrap Param2 constructor" << std::endl;
+}
+
 ClapTrap::ClapTrap(ClapTrap const& copy)
 {
 	std::cout << "ClapTrap Copy constructor" << std::endl;

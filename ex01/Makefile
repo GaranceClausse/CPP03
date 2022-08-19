@@ -1,4 +1,4 @@
-NAME = ClapTrap
+NAME = ScavTrap
 OBJS = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 CC = c++
