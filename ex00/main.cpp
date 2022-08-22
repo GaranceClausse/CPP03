@@ -49,7 +49,8 @@ int	main()
 	std::cout << claptrap << std::endl << std::endl;
 	claptrap.attack(targetname);
 	std::cout << claptrap << std::endl << std::endl;
-
+	claptrap.takeDamage(7);
+	std::cout << claptrap << std::endl << std::endl;
 
 	return 0;
 }
